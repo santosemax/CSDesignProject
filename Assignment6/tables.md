@@ -6,10 +6,27 @@
 
 | Start | Completion | Task |
 | -------  | ------- | ------------------------------------------------------------------- |
-| 10/8 | 10/15 | Research SQL libraries to use along with Python => Max |
-| 10/8 | 10/15 | Investigate how to host website on cloud platform => Max |
-| 10/20 | 10/25 | Design a method to cache data after a user has searched for it => Max |
-| 10/30 | 11/4 | Create html page handler using Python => Max |
-| 11/5 | 11/10 | Test database updating on each search (See task 8 also) => Max |
+| 10/8 | 10/15 | Research SQL libraries to use along with Python |
+| 10/8 | 10/15 | Investigate how to host website on cloud platform |
+| 10/20 | 10/25 | Design a method to cache data after a user has searched for it |
+| 10/30 | 11/4 | Create html page handler using Python |
+| 11/5 | 11/10 | Test database updating on each search (See task 8 also) |
+
+
+### To be added:
+- Create wireframes to capture UI designs => Jacob
+- Document design process => Jacob
+- Research most appropiate Javascript framework for application design & components => Jacob
+- Document how to use application => Jacob
+- Test interactions with frontend design => Jacob
+
+- Spencer's Tasks
 
 # EFFORT MATRIX
+| Start | Task | % Max | % Jacob | % Spencer |
+| ------- | ------------------------------------------------------------------- | ------- | ------- | ------- |
+| 10/8 | Research SQL libraries to use along with Python | 100% | 0% | 0% |
+| 10/8 | Investigate how to host website on cloud platform | 100% | 0% | 0% |
+| 10/20 | Design a method to cache data after a user has searched for it | 100% | 0% | 0% |
+| 10/30 | Create html page handler using Python | 100% | 0% | 0% |
+| 11/5 | Test database updating on each search (See task 8 also) | 100% | 0% | 0% |
