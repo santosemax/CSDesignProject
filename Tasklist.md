@@ -10,6 +10,6 @@
 10. Create html page handler using Python => Max
 11. Research efficent web scraping processess => Spencer
 12. Test user search results return expected queries => Spencer
-13. Implament filter functionality for user searches => Spencer
-14. Implament functionality to fetch cached database data => Spencer
+13. Implement filter functionality for user searches => Spencer
+14. Implement functionality to fetch cached database data => Spencer
 15. Testing End-to-end => Spencer
