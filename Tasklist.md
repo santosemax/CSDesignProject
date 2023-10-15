@@ -8,4 +8,8 @@
 8. Investigate how to host website on cloud platform => Max
 9. Design a method to cache data after a user has searched for it => Max
 10. Create html page handler using Python => Max
-
+11. Research efficent web scraping processess => Spencer
+12. Test user search results return expected queries => Spencer
+13. Implament filter functionality for user searches => Spencer
+14. Implament functionality to fetch cached database data => Spencer
+15. End-to-end testing => Spencer
