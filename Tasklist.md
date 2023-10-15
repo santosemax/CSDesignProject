@@ -12,4 +12,4 @@
 12. Test user search results return expected queries => Spencer
 13. Implament filter functionality for user searches => Spencer
 14. Implament functionality to fetch cached database data => Spencer
-15. End-to-end testing => Spencer
+15. Testing End-to-end => Spencer
