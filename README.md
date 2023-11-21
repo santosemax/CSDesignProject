@@ -2,7 +2,7 @@
 
 ## Team MSI
 
-### [Project Description (Assignment #2)](https://github.com/santosemax/CSDesignProject/blob/main/Project-Description.md)
+### [Project Description](https://github.com/santosemax/CSDesignProject/blob/main/Project-Description.md) (Assignment #2)
 
 ### User Stories and Design Diagrams (Assignment #4)
 - [User Stories](https://github.com/santosemax/CSDesignProject/blob/main/User_Stories.md)
