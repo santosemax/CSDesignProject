@@ -15,7 +15,7 @@
 - [Timeline](https://github.com/santosemax/CSDesignProject/blob/main/Assignment6/tables.md)
 - [Effort Matrix (see below 'timeline' section](https://github.com/santosemax/CSDesignProject/blob/main/Assignment6/tables.md)
 
-### ABET Concerns Essay (Assignment #7)
+### [ABET Concerns Essay](https://github.com/santosemax/CSDesignProject/blob/main/Assignment7/Constraints.md) (Assignment #7)
 
 ### PPT Slideshow (Assignment #8)
 - [Video](https://www.youtube.com/watch?v=CCIRXLkuagY)
