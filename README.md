@@ -21,7 +21,7 @@
 - [Video](https://www.youtube.com/watch?v=CCIRXLkuagY)
 
 ### Self-Assessment Essays (Assignment #3)
-- [Max Santos]()
+- [Max Santos](https://github.com/santosemax/CSDesignProject/tree/main/SelfAssessment)
 
 ### Professional Biographies (Assignment #1)
 - [Max Santos](https://github.com/santosemax/CSDesignProject/blob/main/Bios/Bio_Santos.md0)
