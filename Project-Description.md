@@ -15,8 +15,8 @@
 
 - Jacob Butler
 
-- Major:
-- Email:
+- Major: Computer Science
+- Email: butlejb@mail.uc.edu
 
 # Background Description:
 An application that pulls from the web articles done on films, literature, or any other forms of art that you may be interested in. This would include providing a user with facts about a writer, a director, or any other artist/scientist you may be interested in. 
