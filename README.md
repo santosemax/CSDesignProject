@@ -11,7 +11,6 @@
 
 ### Project Tasks and Timeline (Assignment #5-6)
 - [Task List](https://github.com/santosemax/CSDesignProject/blob/main/Tasklist.md)
-- Milestones
 - [Timeline](https://github.com/santosemax/CSDesignProject/blob/main/Assignment6/tables.md)
 - [Effort Matrix (see below 'timeline' section](https://github.com/santosemax/CSDesignProject/blob/main/Assignment6/tables.md)
 
