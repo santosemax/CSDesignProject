@@ -27,9 +27,7 @@
 - [Max Santos](https://github.com/santosemax/CSDesignProject/blob/main/Bios/Bio_Santos.md0)
 
 ### Budget
-- Expenses to Date
-- Show Monetary Value of Donated Items/Donation Sources
+- [Budget](https://github.com/santosemax/CSDesignProject/blob/main/Budget.md)
 
 ### Appendix
-- include appropriate references, citations, links to code repositories, and meeting notes.
-- there should be evidence justifying 45 hours of effort for each team member.
+- [Appendix](https://github.com/santosemax/CSDesignProject/blob/main/Appendix.md)
