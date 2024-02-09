@@ -4,6 +4,8 @@
 
 ### [Project Description](https://github.com/santosemax/CSDesignProject/blob/main/Project-Description.md) (Assignment #2)
 
+### [User Documentation](https://github.com/santosemax/CSDesignProject/blob/main/UserDocs.md)
+
 ### User Stories and Design Diagrams (Assignment #4)
 - [User Stories](https://github.com/santosemax/CSDesignProject/blob/main/User_Stories.md)
 - [Design Diagrams](https://github.com/santosemax/CSDesignProject/tree/main/Design_Diagrams)
