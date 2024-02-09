@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 import sqlite3
+from scrape import Scraper
 
 app = Flask(__name__)
 
@@ -20,16 +21,17 @@ def index():
 def search():
     search_term = request.form['search_term']
 
-    # DO WEB SCRAPING HERE
+    scraper = Scraper(False)
+    title, url = scraper.scrape(search_term)
     
-    # For now, use dummy data.
+
+
+    # Store data as collection of articles
     articles = [
-        {'title': 'Article 1', 'url': 'https://example.com/article1'},
-        {'title': 'Article 2', 'url': 'https://example.com/article2'},
-        # Add more dummy data as needed
+        {'title': title, 'url': url}
     ]
 
-    # Insert dummy data into the database
+    # Insert data into the database
     conn = sqlite3.connect('articles.db')
     c = conn.cursor()
     for article in articles:
