@@ -19,18 +19,13 @@ def index():
 # SEARCH
 @app.route('/search', methods=['POST'])
 def search():
+
+    # TODO: should we talk about clearing the DB on search
     search_term = request.form['search_term']
 
-    scraper = Scraper(False)
-    title, url = scraper.scrape(search_term)
+    scraper = Scraper()
+    articles = scraper.scrape(search_term)
     
-
-
-    # Store data as collection of articles
-    articles = [
-        {'title': title, 'url': url}
-    ]
-
     # Insert data into the database
     conn = sqlite3.connect('articles.db')
     c = conn.cursor()
