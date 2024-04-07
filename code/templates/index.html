@@ -2,16 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover">
     <title>SUBMARINE</title>
 </head>
 <body>
+    <div class="text">
     <h1>SUBMARINE</h1>
-    <form action="/search" method="post">
-        <label for="search_term">Search:</label>
+    <p>Use the search bar below to find authors, artists, directors, and more!</p>
+    </div>
+    <form action="/search" method="post" class="search-bar">
+        <label for="search_term"></label>
         <input type="text" id="search_term" name="search_term" required>
-        <button type="submit">Search</button>
+        <button class="search-btn" type="submit"></button>
     </form>
 </body>
 </html>
