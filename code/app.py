@@ -6,6 +6,7 @@ from imdb import IMDb
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import requests
+import re
 
 app = Flask(__name__)
 
