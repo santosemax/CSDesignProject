@@ -19,7 +19,7 @@
         <h2>Articles</h2>
         <ul>
             {% for result in results %}
-                {% if result[4] != "IMDb" %}
+                {% if result[4] != "IMDb" and result[4] != "Spotify" and result[4] != "Google Books" %}
                     <li><a href="{{ result[2] }}" target="_blank">{{ result[1] }}</a></li>
                 {% endif %}
             {% endfor %}
@@ -31,7 +31,6 @@
                 {% if result[4] == "IMDb" %}
                     {% if not loop.last %}
                         <li>{{ result[1] }}</li>
-                        <!-- <li>{{ result[1].split(': ')[1] }}</li> -->
                         {% if "IMDb URL" in result[1] %}
                             <p><a href="{{ result[1].split(': ')[1] }}" target="_blank">IMDb Link</a></p>
                         {% endif %}
@@ -68,6 +67,24 @@
                     {% endif %}
                     {% if "Total Tracks" in result[1] %}
                         <p>{{ result[1].split(': ')[1] }}</p>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+        <h2>Book Information</h2>
+        <ul>
+            {% for result in results %}
+                {% if result[4] == "Google Books" %}
+                    <li>{{ result[1] }}</li>
+                    {% if "Author" in result[1] %}
+                        <p>{{ result[1].split(': ')[1] }}</p>
+                    {% endif %}
+                    {% if "Year of Publication" in result[1] %}
+                        <p>{{ result[1].split(': ')[1] }}</p>
+                    {% endif %}
+                    {% if "Book Cover" in result[1] %}
+                        <img src="{{ result[1].split(': ')[1] }}" alt="NO IMAGE" class="film-image">
                     {% endif %}
                 {% endif %}
             {% endfor %}

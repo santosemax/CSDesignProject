@@ -5,6 +5,7 @@ import wikipediaapi
 from imdb import IMDb
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
+import requests
 
 app = Flask(__name__)
 
@@ -51,27 +52,38 @@ def scrape_wikipedia_results(search_term):
     else:
         return []
 
-# Function to search for film using IMDbPY
-def search_film(search_term):
+# Function to search for films using IMDbPY
+def search_films(search_term):
     ia = IMDb()
     search_results = ia.search_movie(search_term)
-    if search_results:
-        # Return the first search result
-        movie_id = search_results[0].movieID
+    films = []
+    for result in search_results[:5]:  # Limit to 5 results
+        movie_id = result.movieID
         movie = ia.get_movie(movie_id)
-        return movie
-    else:
-        return None
+        films.append(movie)
+    return films
 
-# Function to search for album using Spotify
-def search_album(search_term):
-    results = spotify.search(q=search_term, type='album', limit=1)
-    if results['albums']['items']:
-        album = results['albums']['items'][0]
-        album_title = album['name']  # Get the album title
-        return album_title, album
-    else:
-        return None, None
+# Function to search for albums using Spotify
+def search_albums(search_term):
+    results = spotify.search(q=search_term, type='album', limit=5)
+    albums = []
+    for album in results['albums']['items']:
+        album_title = album['name']
+        albums.append((album_title, album))
+    return albums
+
+# Function to search for books using Google Books API
+def search_books(search_term):
+    url = f"https://www.googleapis.com/books/v1/volumes?q={search_term}&maxResults=5"  # Limit to 5 results
+    response = requests.get(url)
+    books = []
+    if response.status_code == 200:
+        data = response.json()
+        if 'items' in data:
+            for item in data['items']:
+                book = item['volumeInfo']
+                books.append(book)
+    return books
 
 # MAIN PAGE
 @app.route('/')
@@ -100,9 +112,9 @@ def search():
             c.execute('INSERT INTO articles (title, url, search_phrase, source) VALUES (?, ?, ?, ?)',
                       (article['title'], article['url'], search_term, article['source']))
         
-        # Search for film
-        film = search_film(search_term)
-        if film:
+        # Search for films
+        films = search_films(search_term)
+        for film in films:
             # Extract relevant information from the movie object
             title = film.get('title', 'N/A')
             imdb_url = f"https://www.imdb.com/title/tt{film.movieID}/"
@@ -127,9 +139,9 @@ def search():
                       (f'Image URL: {img_url}', '', search_term, 'IMDb'))
             conn.commit()
         
-        # Search for album
-        album_title, album = search_album(search_term)
-        if album:
+        # Search for albums
+        albums = search_albums(search_term)
+        for album_title, album in albums:
             # Extract relevant information from the album object
             artist = ', '.join(artist['name'] for artist in album['artists'])
             album_cover = album['images'][0]['url'] if album['images'] else 'N/A'
@@ -149,6 +161,26 @@ def search():
                       (f'Total Tracks: {total_tracks}', '', search_term, 'Spotify'))
             conn.commit()
         
+        # Search for books
+        books = search_books(search_term)
+        for book_info in books:
+            # Extract relevant information from the book info
+            title = book_info.get('title', 'N/A')
+            author = ', '.join(book_info.get('authors', ['Unknown']))
+            year = book_info.get('publishedDate', 'N/A')
+            book_cover = book_info.get('imageLinks', {}).get('thumbnail', 'N/A')
+            
+            # Save book information into the database
+            c.execute('INSERT INTO articles (title, url, search_phrase, source) VALUES (?, ?, ?, ?)',
+                      (f'Book Title: {title}', '', search_term, 'Google Books'))  # Include the book title
+            c.execute('INSERT INTO articles (title, url, search_phrase, source) VALUES (?, ?, ?, ?)',
+                      (f'Author: {author}', '', search_term, 'Google Books'))
+            c.execute('INSERT INTO articles (title, url, search_phrase, source) VALUES (?, ?, ?, ?)',
+                      (f'Year of Publication: {year}', '', search_term, 'Google Books'))
+            c.execute('INSERT INTO articles (title, url, search_phrase, source) VALUES (?, ?, ?, ?)',
+                      (f'Book Cover: {book_cover}', '', search_term, 'Google Books'))
+            conn.commit()
+        
     conn.close()
 
     return redirect(url_for('display_results', search_term=search_term))
@@ -164,7 +196,6 @@ def display_results(search_term):
     conn.close()
 
     return render_template('results.html', results=results)
-
 
 if __name__ == '__main__':
     app.run(debug=True)
