@@ -31,22 +31,43 @@
                 {% if result[4] == "IMDb" %}
                     {% if not loop.last %}
                         <li>{{ result[1] }}</li>
+                        <!-- <li>{{ result[1].split(': ')[1] }}</li> -->
+                        {% if "IMDb URL" in result[1] %}
+                            <p><a href="{{ result[1].split(': ')[1] }}" target="_blank">IMDb Link</a></p>
+                        {% endif %}
+                        {% if "Image" in result[1] %}
+                            <img src="{{ result[1].split(': ')[1] }}" alt="NO IMAGE" class="film-image">
+                        {% endif %}
+                        {% if "Summary" in result[1] %}
+                            <!-- <p>{{ result[1].split(': ')[0] }}</p> -->
+                        {% endif %}
+                        {% if "Director" in result[1] %}
+                            <!-- <p>{{ result[1].split(': ')[0] }}</p> -->
+                        {% endif %}
+                        {% if "Cast" in result[1] %}
+                            <!-- <p>{{ result[1].split(': ')[0] }}</p> -->
+                        {% endif %}
                     {% endif %}
-                    <!-- <li>{{ result[1].split(': ')[1] }}</li> -->
-                    {% if "IMDb URL" in result[1] %}
-                        <p><a href="{{ result[1].split(': ')[1] }}" target="_blank">IMDb Link</a></p>
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+        <h2>Album Information</h2>
+        <ul>
+            {% for result in results %}
+                {% if result[4] == "Spotify" %}
+                    <li>{{ result[1] }}</li>
+                    {% if "Artist" in result[1] %}
+                        <p>{{ result[1].split(': ')[1] }}</p>
                     {% endif %}
-                    {% if "Image URL" in result[1] %}
+                    {% if "Album Cover" in result[1] %}
                         <img src="{{ result[1].split(': ')[1] }}" alt="NO IMAGE" class="film-image">
                     {% endif %}
-                    {% if "Summary" in result[1] %}
-                        <!-- <p>{{ result[1].split(': ')[0] }}</p> -->
+                    {% if "Release Date" in result[1] %}
+                        <p>{{ result[1].split(': ')[1] }}</p>
                     {% endif %}
-                    {% if "Director" in result[1] %}
-                        <!-- <p>{{ result[1].split(': ')[0] }}</p> -->
-                    {% endif %}
-                    {% if "Cast" in result[1] %}
-                        <!-- <p>{{ result[1].split(': ')[0] }}</p> -->
+                    {% if "Total Tracks" in result[1] %}
+                        <p>{{ result[1].split(': ')[1] }}</p>
                     {% endif %}
                 {% endif %}
             {% endfor %}

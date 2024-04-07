@@ -3,8 +3,15 @@ import sqlite3
 import googlesearch
 import wikipediaapi
 from imdb import IMDb
+import spotipy
+from spotipy.oauth2 import SpotifyClientCredentials
 
 app = Flask(__name__)
+
+# Initialize Spotify client
+spotify_client_credentials_manager = SpotifyClientCredentials(client_id='d98da9dfe2ed4a7594ce4449653c066f',
+                                                              client_secret='cf3fdc78a60142ec9ebb0050975005d2')
+spotify = spotipy.Spotify(client_credentials_manager=spotify_client_credentials_manager)
 
 # SQLite database setup (Articles will be used to host the retrieved articles)
 def initialize_database():
@@ -32,7 +39,6 @@ def scrape_google_results(search_term):
         title = result.split(' - ')[0]
         # Include source information in the dictionary
         articles.append({'title': title, 'url': result, 'search_phrase': search_term, 'source': 'Google'})
-        # print(f'\n\nGOOGLE RESULTS:\n {articles}')
     return articles
 
 # Function to perform web scraping from Wikipedia
@@ -41,7 +47,6 @@ def scrape_wikipedia_results(search_term):
     page_py = wiki_wiki.page(search_term)
     if page_py.exists():
         # Include source information in the dictionary
-        print(f'\n\nWIKIPEDIA RESULTS:\n {page_py.fullurl}')
         return [{'title': page_py.title, 'url': page_py.fullurl, 'search_phrase': search_term, 'source': 'Wikipedia'}]
     else:
         return []
@@ -57,6 +62,16 @@ def search_film(search_term):
         return movie
     else:
         return None
+
+# Function to search for album using Spotify
+def search_album(search_term):
+    results = spotify.search(q=search_term, type='album', limit=1)
+    if results['albums']['items']:
+        album = results['albums']['items'][0]
+        album_title = album['name']  # Get the album title
+        return album_title, album
+    else:
+        return None, None
 
 # MAIN PAGE
 @app.route('/')
@@ -112,6 +127,28 @@ def search():
                       (f'Image URL: {img_url}', '', search_term, 'IMDb'))
             conn.commit()
         
+        # Search for album
+        album_title, album = search_album(search_term)
+        if album:
+            # Extract relevant information from the album object
+            artist = ', '.join(artist['name'] for artist in album['artists'])
+            album_cover = album['images'][0]['url'] if album['images'] else 'N/A'
+            release_date = album['release_date']
+            total_tracks = album['total_tracks']
+            
+            # Save album information into the database
+            c.execute('INSERT INTO articles (title, url, search_phrase, source) VALUES (?, ?, ?, ?)',
+                      (f'Album Title: {album_title}', '', search_term, 'Spotify'))  # Include the album title
+            c.execute('INSERT INTO articles (title, url, search_phrase, source) VALUES (?, ?, ?, ?)',
+                      (f'Artist: {artist}', '', search_term, 'Spotify'))
+            c.execute('INSERT INTO articles (title, url, search_phrase, source) VALUES (?, ?, ?, ?)',
+                      (f'Album Cover: {album_cover}', '', search_term, 'Spotify'))
+            c.execute('INSERT INTO articles (title, url, search_phrase, source) VALUES (?, ?, ?, ?)',
+                      (f'Release Date: {release_date}', '', search_term, 'Spotify'))
+            c.execute('INSERT INTO articles (title, url, search_phrase, source) VALUES (?, ?, ?, ?)',
+                      (f'Total Tracks: {total_tracks}', '', search_term, 'Spotify'))
+            conn.commit()
+        
     conn.close()
 
     return redirect(url_for('display_results', search_term=search_term))
@@ -127,6 +164,7 @@ def display_results(search_term):
     conn.close()
 
     return render_template('results.html', results=results)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
