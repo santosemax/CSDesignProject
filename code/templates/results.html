@@ -14,10 +14,10 @@
     </style>
 </head>
 <body>
-    <h1>Search Results</h1>
 
     {% if results %}
-        <h2>Articles</h2>
+        <div class="articles">
+        <h1>Articles</h1>
         <ul>
             {% for result in results %}
                 {% if result[4] != "IMDb" and result[4] != "Spotify" and result[4] != "Google Books" %}
@@ -25,7 +25,9 @@
                 {% endif %}
             {% endfor %}
         </ul>
+        </div>
 
+        <div class="films">
         <h2>Film Information</h2>
         <ul>
             {% for result in results %}
@@ -51,7 +53,9 @@
                 {% endif %}
             {% endfor %}
         </ul>
+        </div>
 
+        <div class="albums">
         <h2>Album Information</h2>
         <ul>
             {% for result in results %}
@@ -72,7 +76,9 @@
                 {% endif %}
             {% endfor %}
         </ul>
+    </div>
 
+        <div class="books">
         <h2>Book Information</h2>
         <ul>
             {% for result in results %}
@@ -93,6 +99,7 @@
     {% else %}
         <p>No results found.</p>
     {% endif %}
+</div>
     
     <a href="/">Back to Home</a>
 </body>

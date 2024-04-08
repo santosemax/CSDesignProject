@@ -1,3 +1,75 @@
 body {
-    background-color: white;
+    background-color: #333d3d;
+    margin: 0;
+	padding: 0;
+    border: 0;
+}
+
+h1, h2, ul, p {
+    font-family: Hind, sans-serif;
+    color: white;
+}
+
+h1, h2 {
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+a:link {
+    text-decoration: none;
+    color: #2f2b3a;
+}
+
+a:visited {
+    color: #2f2b3a;
+}
+
+
+.articles {
+    background-color: #8b8b8b;
+    padding: 0;
+    text-align: center;
+    margin-left: -40px;
+    margin-bottom: -20px;
+
+    h1 {
+        margin-left: 40px;
+    }
+
+    ul {
+        margin: 0;
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+        row-gap: 5px;
+    }
+
+    li a {
+        display: block;
+        border-left: 0.55em solid #66f;
+        border-right: 0.55em solid #66f;
+        border-radius: 20px;
+        padding: 0.25em 0.5em;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        color: #fff;
+        background-color: #66f;
+        border-left-color: #00f;
+        border-right-color: #00f;
+    }
+}
+
+.films {
+    background-color: #575757;
+}
+
+.albums {
+    background-color: #282828;
+}
+
+.books {
+    background-color: #717171;
 }
