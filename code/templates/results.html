@@ -27,33 +27,60 @@
         </ul>
         </div>
 
+        
+        <h1>Films</h1>
         <div class="films">
-        <h2>Film Information</h2>
         <ul>
+            
             {% for result in results %}
+            
                 {% if result[4] == "IMDb" %}
-                    {% if not loop.last %}
-                        <li>{{ result[1] }}</li>
-                        {% if "IMDb URL" in result[1] %}
+                
+                    {% if not loop.last %} 
+                    
+                     {{ result[1] }}
+                        <div class="film-title">
+                        {% if "IMDb URL" in result[1] %}    
                             <p><a href="{{ result[1].split(': ')[1] }}" target="_blank">IMDb Link</a></p>
+                        </div>
                         {% endif %}
+                        
+                        <div class="film-img">
                         {% if "Image" in result[1] %}
+                        
                             <img src="{{ result[1].split(': ')[1] }}" alt="NO IMAGE" class="film-image">
                         {% endif %}
+                        </div>
+                        
+                        <div class="film-summary">
                         {% if "Summary" in result[1] %}
-                            <!-- <p>{{ result[1].split(': ')[0] }}</p> -->
+                        
+                            <!-- <p>{{ result[1].split(': ')[0] }}</p> -->                      
                         {% endif %}
+                        </div>
+                        
+                        <div class="film-director">
                         {% if "Director" in result[1] %}
-                            <!-- <p>{{ result[1].split(': ')[0] }}</p> -->
+                        
+                            <!-- <p>{{ result[1].split(': ')[0] }}</p> -->                      
                         {% endif %}
+                        </div>
+                        
+                        <div class="film-cast">
                         {% if "Cast" in result[1] %}
+                        
                             <!-- <p>{{ result[1].split(': ')[0] }}</p> -->
+                        
+                        </div>
                         {% endif %}
+                
                     {% endif %}
+                
                 {% endif %}
+            </div>
             {% endfor %}
+        
         </ul>
-        </div>
 
         <div class="albums">
         <h2>Album Information</h2>

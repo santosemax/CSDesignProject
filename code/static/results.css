@@ -24,13 +24,14 @@ a:visited {
     color: #2f2b3a;
 }
 
-
+/* article style */
 .articles {
     background-color: #8b8b8b;
     padding: 0;
     text-align: center;
     margin-left: -40px;
-    margin-bottom: -20px;
+    margin-bottom: -21px;
+    padding-bottom: 15px;
 
     h1 {
         margin-left: 40px;
@@ -62,8 +63,27 @@ a:visited {
     }
 }
 
+/* film style */
+.film-title { grid-area: title; }
+.film-img { grid-area: menu; }
+.film-cast { grid-area: main; }
+.film-summary { grid-area: right; }
+.film-director { grid-area: footer; }
+
 .films {
     background-color: #575757;
+    display: grid;
+    grid-template-areas:
+    'title title title title title title'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+    grid-template-columns: repeat(auto-fill);
+    gap: 10px;
+    padding: 10px;
+}
+
+.films > div {
+    background-color: blue;
 }
 
 .albums {
