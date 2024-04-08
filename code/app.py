@@ -126,7 +126,7 @@ def search():
             
             # Save film information into the database
             c.execute('INSERT INTO articles (title, url, search_phrase, source) VALUES (?, ?, ?, ?)',
-                      (title, imdb_url, search_term, 'IMDb'))
+                      (('Title: ' + title), imdb_url, search_term, 'IMDb'))
             conn.commit()
             
             # Save additional information into the database
