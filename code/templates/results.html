@@ -11,6 +11,11 @@
             max-width: 300px; /* Set maximum width for the image */
             height: auto; /* Maintain aspect ratio */
         }
+
+        /* Remove default bullet points from all unordered lists */
+        ul {
+            list-style-type: none;
+        }
     </style>
 </head>
 <body>
@@ -29,56 +34,43 @@
 
         
         <h1>Films</h1>
-        <div class="films">
-        <ul>
-            
-            {% for result in results %}
-            
-                {% if result[4] == "IMDb" %}
-                
-                    {% if not loop.last %} 
-                    
-                     {{ result[1] }}
-                        <div class="film-title">
-                        {% if "IMDb URL" in result[1] %}    
-                            <p><a href="{{ result[1].split(': ')[1] }}" target="_blank">IMDb Link</a></p>
-                        </div>
-                        {% endif %}
-                        
-                        <div class="film-img">
+<div class="films">
+    <ul>
+        {% for result in results %}
+            {% if result[4] == "IMDb" %}
+                <li>
+                    <!-- <div class="film-title">{{ result[0] }}</div> -->
+                    <div class="film-img">
                         {% if "Image" in result[1] %}
-                        
                             <img src="{{ result[1].split(': ')[1] }}" alt="NO IMAGE" class="film-image">
                         {% endif %}
-                        </div>
-                        
-                        <div class="film-summary">
+                    </div>
+                    <div class="film-summary">
                         {% if "Summary" in result[1] %}
-                        
-                            <!-- <p>{{ result[1].split(': ')[0] }}</p> -->                      
+                            <p>{{ result[1].split(': ')[1] }}</p>
                         {% endif %}
-                        </div>
-                        
-                        <div class="film-director">
+                    </div>
+                    <div class="film-director">
                         {% if "Director" in result[1] %}
-                        
-                            <!-- <p>{{ result[1].split(': ')[0] }}</p> -->                      
+                            <p>Director: {{ result[1].split(': ')[1] }}</p>
                         {% endif %}
-                        </div>
-                        
-                        <div class="film-cast">
+                    </div>
+                    <div class="film-cast">
                         {% if "Cast" in result[1] %}
-                        
-                            <!-- <p>{{ result[1].split(': ')[0] }}</p> -->
-                        
-                        </div>
+                            <p>Cast: {{ result[1].split(': ')[1] }}</p>
                         {% endif %}
-                
-                    {% endif %}
-                
-                {% endif %}
-            </div>
-            {% endfor %}
+                    </div>
+                    <div class="film-link">
+                        {% if "IMDb URL" in result[1] %}
+                            <p><a href="{{ result[1].split(': ')[1] }}" target="_blank">IMDb Link</a></p>
+                        {% endif %}
+                    </div>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+
         
         </ul>
 

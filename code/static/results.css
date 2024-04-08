@@ -82,6 +82,10 @@ a:visited {
     padding: 10px;
 }
 
+ul {
+    list-style-type: none; /* Max: Remove default bullet points */
+}
+
 .films > div {
     background-color: blue;
 }
@@ -93,3 +97,4 @@ a:visited {
 .books {
     background-color: #717171;
 }
+
