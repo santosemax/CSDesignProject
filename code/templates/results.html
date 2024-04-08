@@ -11,32 +11,26 @@
             max-width: 300px; /* Set maximum width for the image */
             height: auto; /* Maintain aspect ratio */
         }
-
-        /* Remove default bullet points from all unordered lists */
-        ul {
-            list-style-type: none;
-        }
     </style>
 </head>
 <body>
 
-    {% if results %}
-        <div class="articles">
-        <h1>Articles</h1>
-        <ul>
-            {% for result in results %}
-                {% if result[4] != "IMDb" and result[4] != "Spotify" and result[4] != "Google Books" %}
-                    <li><a href="{{ result[2] }}" target="_blank">{{ result[1] }}</a></li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-        </div>
-
-        
-        <h1>Films</h1>
-<div class="films">
+{% if results %}
+<div class="articles">
+    <h1>Articles</h1>
     <ul>
         {% for result in results %}
+            {% if result[4] != "IMDb" and result[4] != "Spotify" and result[4] != "Google Books" %}
+                <li><a href="{{ result[2] }}" target="_blank">{{ result[1] }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="films">
+    <h1>Films</h1>
+    <ul>
+        {% for result in results[:-2] %}
             {% if result[4] == "IMDb" %}
                 <li>
                     <!-- <div class="film-title">{{ result[0] }}</div> -->
@@ -71,55 +65,61 @@
     </ul>
 </div>
 
-        
-        </ul>
-
-        <div class="albums">
-        <h2>Album Information</h2>
-        <ul>
-            {% for result in results %}
-                {% if result[4] == "Spotify" %}
-                    <li>{{ result[1] }}</li>
+<div class="albums">
+    <h2>Album Information</h2>
+    <ul>
+        {% for result in results %}
+            {% if result[4] == "Spotify" %}
+                <li>
+                    <!-- <div>{{ result[0] }}</div> -->
                     {% if "Artist" in result[1] %}
-                        <p>{{ result[1].split(': ')[1] }}</p>
+                        <p>Artist: {{ result[1].split(': ')[1] }}</p>
                     {% endif %}
                     {% if "Album Cover" in result[1] %}
-                        <img src="{{ result[1].split(': ')[1] }}" alt="NO IMAGE" class="film-image">
+                        <div class="album-cover">
+                            <img src="{{ result[1].split(': ')[1] }}" alt="NO IMAGE" class="film-image">
+                        </div>
                     {% endif %}
                     {% if "Release Date" in result[1] %}
-                        <p>{{ result[1].split(': ')[1] }}</p>
+                        <p>Release Date: {{ result[1].split(': ')[1] }}</p>
                     {% endif %}
                     {% if "Total Tracks" in result[1] %}
-                        <p>{{ result[1].split(': ')[1] }}</p>
+                        <p>Total Tracks: {{ result[1].split(': ')[1] }}</p>
                     {% endif %}
-                {% endif %}
-            {% endfor %}
-        </ul>
-    </div>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
 
-        <div class="books">
-        <h2>Book Information</h2>
-        <ul>
-            {% for result in results %}
-                {% if result[4] == "Google Books" %}
-                    <li>{{ result[1] }}</li>
+<div class="books">
+    <h2>Book Information</h2>
+    <ul>
+        {% for result in results %}
+            {% if result[4] == "Google Books" %}
+                <li>
+                    <!-- <div>{{ result[0] }}</div> -->
                     {% if "Author" in result[1] %}
-                        <p>{{ result[1].split(': ')[1] }}</p>
+                        <p>Author: {{ result[1].split(': ')[1] }}</p>
                     {% endif %}
                     {% if "Year of Publication" in result[1] %}
-                        <p>{{ result[1].split(': ')[1] }}</p>
+                        <p>Year of Publication: {{ result[1].split(': ')[1] }}</p>
                     {% endif %}
                     {% if "Book Cover" in result[1] %}
-                        <img src="{{ result[1].split(': ')[1] }}" alt="NO IMAGE" class="film-image">
+                        <div class="book-cover">
+                            <img src="{{ result[1].split(': ')[1] }}" alt="NO IMAGE" class="film-image">
+                        </div>
                     {% endif %}
-                {% endif %}
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>No results found.</p>
-    {% endif %}
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
 </div>
-    
-    <a href="/">Back to Home</a>
+
+{% else %}
+<p>No results found.</p>
+{% endif %}
+
+<a href="/">Back to Home</a>
 </body>
 </html>
