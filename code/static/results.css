@@ -5,7 +5,7 @@ body {
     border: 0;
 }
 
-h1, h2, ul, p {
+h1, h2, ul, p, a {
     font-family: Hind, sans-serif;
     color: white;
 }
@@ -67,17 +67,19 @@ a:visited {
 .films {
     background-color: #575757;
     display: grid;
+    padding-bottom: 350px;
     /* grid-template-areas:
     'title title title title title title'
     'menu main main main right right'
     'menu footer footer footer footer footer'; */
     /* grid-template-columns: repeat(auto-fill); */
 
-    h1 {
+    h1{
         margin-left: 40px;
     }
 
-    h2 {
+
+    h2, a {
         text-align: left;
         padding-left: 350px;
     }
@@ -115,6 +117,11 @@ ul {
 
     ul {
         display: grid;
+    }
+
+    a {
+        font-family: Hind, sans-serif;
+        color: white;
     }
 
     h3 {
@@ -187,4 +194,40 @@ ul {
         border-left-color: #00f;
         border-right-color: #00f;
     }
+}
+
+/* Add this CSS to limit the size of film images */
+/* Add styles for the hovering buttons */
+.scroll-btns {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+}
+
+.scroll-btn {
+    display: block;
+    background-color: #666;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.scroll-btn:hover {
+    background-color: #888;
+}
+
+/* Adjust image sizes for films, albums, and books */
+.film-image {
+    max-width: 300px; /* Set maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.albums .film-image,
+.books .film-image {
+    max-width: 200px; /* Set maximum width for the image */
+    max-height: 300px; /* Set maximum height for the image */
+    height: auto; /* Maintain aspect ratio */
 }
