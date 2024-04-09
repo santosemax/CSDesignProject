@@ -27,26 +27,32 @@
     </ul>
 </div>
 
-<div class="films">
-    <h1>Films</h1>
-    <ul>
-        {% for result in results %}
-            {% if result[4] == "IMDb" %}
-                <li>
+
+<!-- <div class="row"> -->
+    <!-- <div class="column"> -->
+        <div class="films">
+            <h1>Films</h1>
+            <ul>
+            {% for result in results %}
+                {% if result[4] == "IMDb" %}
                     <!-- <div class="film-title">{{ result[1] }}</div> -->
-                    <div class="film-img">
-                        {% if "Image" in result[1] %}
-                            <img src="{{ result[1].split(': ')[1] }}" alt="NO IMAGE" class="film-image">
-                        {% endif %}
-                    </div>
-                    <div class="film-title">
-                        {% if "Title" in result[1] %}
-                            <p>{{ result[1].split(': ')[1] }}</p>
-                        {% endif %}
-                    </div>
+                    <!-- <div class="row"> -->
+                        <div class="film-image">
+                            {% if "Image" in result[1] %}
+                                <img src="{{ result[1].split(': ')[1] }}" alt="NO IMAGE" class="film-image">
+                            {% endif %}
+                        </div>
+                    
+                        <div class="film-title">
+                            {% if "Title" in result[1] %}
+                                <h2>{{ result[1].split(': ')[1] }}</h2>
+                            {% endif %}
+                        </div>
+
+                    <!-- </div> -->
                     <div class="film-summary">
                         {% if "Summary" in result[1] %}
-                            <p>{{ result[1].split(': ')[1] }}</p>
+                            <p>Summary: {{ result[1].split(': ')[1] }}</p>
                         {% endif %}
                     </div>
                     <div class="film-director">
@@ -64,64 +70,70 @@
                             <p><a href="{{ result[1].split(': ')[1] }}" target="_blank">IMDb Link</a></p>
                         {% endif %}
                     </div>
-                </li>
             {% endif %}
         {% endfor %}
-    </ul>
-</div>
+            </ul>
+        </div>
+    <!-- </div> -->
+<!-- </div> -->
 
 <div class="albums">
-    <h2>Album Information</h2>
+    <h1>Albums</h1>
     <ul>
         {% for result in results %}
             {% if result[4] == "Spotify" %}
-                <li>
-                    <!-- <div>{{ result[0] }}</div> -->
+                <!-- <li> -->
+                    <!-- <div>{{ result[0] }}</div> -->             
                     {% if "Album Title" in result[1] %}
-                        <p>Title: {{ result[1].split(': ')[1] }}</p>
+                        <h3>{{ result[1].split(': ')[1] }}</h3>
                     {% endif %}
+                    <div class="album-info">
                     {% if "Artist" in result[1] %}
-                        <p>Artist: {{ result[1].split(': ')[1] }}</p>
+                        <p class="test3">Artist: {{ result[1].split(': ')[1] }}</p>
                     {% endif %}
-                    {% if "Release Date" in result[1] %}
-                        <p>Release Date: {{ result[1].split(': ')[1] }}</p>
-                    {% endif %}
-                    {% if "Total Tracks" in result[1] %}
-                        <p>Total Tracks: {{ result[1].split(': ')[1] }}</p>
-                    {% endif %}
+                    <div class="album-dates">
+                        {% if "Release Date" in result[1] %}
+                            <p class="test">Release Date: {{ result[1].split(': ')[1] }}</p>
+                        {% endif %}
+                    
+                        {% if "Total Tracks" in result[1] %}
+                            <p class="test2">Total Tracks: {{ result[1].split(': ')[1] }}</p>
+                        {% endif %}
+                    </div>
+                    </div>
                     {% if "Album Cover" in result[1] %}
                         <div class="album-cover">
                             <img src="{{ result[1].split(': ')[1] }}" alt="NO IMAGE" class="film-image">
                         </div>
                     {% endif %}
-                </li>
+                <!-- </li> -->
             {% endif %}
         {% endfor %}
     </ul>
 </div>
 
 <div class="books">
-    <h2>Book Information</h2>
+    <h1>Books</h1>
     <ul>
         {% for result in results %}
             {% if result[4] == "Google Books" %}
-                <li>
+                <!-- <li> -->
                     <!-- <div>{{ result[0] }}</div> -->
-                    {% if "Book Title" in result[1] %}
+                    {% if "Book Title" in result[1] %}                
                         <p>Title: {{ result[1].split(': ')[1] }}</p>
                     {% endif %}
                     {% if "Author" in result[1] %}
                         <p>Author: {{ result[1].split(': ')[1] }}</p>
                     {% endif %}
                     {% if "Year of Publication" in result[1] %}
-                        <p>Year of Publication: {{ result[1].split(': ')[1] }}</p>
+                        <p class="test4">Year of Publication: {{ result[1].split(': ')[1] }}</p>
                     {% endif %}
                     {% if "Book Cover" in result[1] %}
                         <div class="book-cover">
                             <img src="{{ result[1].split(': ')[1] }}" alt="NO IMAGE" class="film-image">
                         </div>
                     {% endif %}
-                </li>
+                <!-- </li> -->
             {% endif %}
         {% endfor %}
     </ul>
@@ -131,6 +143,6 @@
 <p>No results found.</p>
 {% endif %}
 
-<a href="/">Back to Home</a>
+<a href="/" class="home">Back to Home</a>
 </body>
 </html>
