@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<script>
+    document.addEventListener('keydown', function(event) {
+        // Check if the spacebar was pressed and no input/textarea is currently focused
+        if (event.code === 'Space' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
+            event.preventDefault(); // Prevent the default spacebar action (scrolling)
+            document.getElementById('search_term').focus(); // Focus the search input
+        }
+    });
+</script>
+    
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
@@ -8,6 +18,7 @@
     <title>SUBMARINE</title>
 </head>
 <body>
+    <h1 class="title">SUBMARINE</h1>
     <form action="/search" method="post" class="search-bar">
         <label for="search_term"></label>
         <input type="text" id="search_term" name="search_term" required>

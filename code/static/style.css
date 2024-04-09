@@ -143,6 +143,29 @@ body {
 .search-bar input:valid + .search-btn:active {
 	transform: translateY(1px);
 }
+body {
+    position: relative;
+}
+
+.title {
+	font-weight: normal;
+	font-size: calc(48px + (32 - 24) * ((100vw - 400px) / (1600 - 400)));
+    position: absolute;
+    top: 180px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+	color: #ffffff; /* Adjust color to fit your design */
+    /* Other styling here */
+}
+
+/* .title {
+    text-align: center;
+    font-weight: normal;
+    margin: 5em 0 10em 10em;
+    
+} */
+
+
 
 @media screen and (prefers-color-scheme: dark) {
 	body,
