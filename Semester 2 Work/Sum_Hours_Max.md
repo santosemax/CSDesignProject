@@ -5,6 +5,7 @@
 - Every weekend I spent about 1-2 hours a day. For both semesters cummulatively, this would be 1.5 * 2 = 3 hours per weekend; multipied by 14 (14 weeks in the semester excluding last one) = 42; then, lastly, multiplying this by two (two semesters), I have 84 hours total over the two semester just on the coding portion alone.
     - Note: For last semester, I had two hours per week instead of weekend which ends up with the same calculation.
 - In addition to the coding, I had the assignments which also add to this number.
+- I also have notes shared in the [appendix](https://github.com/santosemax/CSDesignProject/blob/main/Appendix.md) which I recorded throughout the weekends. They are essentially meeting notes.
 
 - I would also like to insert my commits on Github:
 ![Image](https://github.com/santosemax/CSDesignProject/blob/main/Semester%202%20Work/Commits.jpg)
