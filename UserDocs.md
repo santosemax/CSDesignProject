@@ -1,4 +1,5 @@
 # User Documentation (modified for final version of app)
+- Was not sure if this is the same as the user interface specification. I saw it was optional and added just in case. It clarifies our UI and how to use it.
 
 ## Table of Contents
 - [Overview](#overview)
