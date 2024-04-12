@@ -6,4 +6,4 @@ Summary of Hours (Max):
 - In addition to the coding, I had the assignments which also add to this number.
 
 - I would also like to insert my commits on Github:
-![Image]()
+![Image](https://github.com/santosemax/CSDesignProject/blob/main/Semester%202%20Work/Commits.jpg)
