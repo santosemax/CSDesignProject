@@ -15,9 +15,9 @@
 ### 6. [Final Expo Poster](https://docs.google.com/presentation/d/1LWkO6Kht8-dDCr4GuFAJ6Antr9C2X-41hF-urhRPkpM/edit?usp=sharing)
 
 
-### 7 Self-Assessment Essays (Assignment #3)
+### 7. Self-Assessment Essays (Assignment #3)
 - [Max Santos: Sem1](https://github.com/santosemax/CSDesignProject/tree/main/SelfAssessment)
-- [Max Santos: Sem2](https://github.com/santosemax/CSDesignProject/blob/main/SelfAssessment/SelfAssessmentSem2_Santos.docx)
+- [Max Santos: Sem2](https://github.com/santosemax/CSDesignProject/blob/main/SelfAssessment/SelfAssessmentSem2_Santos.docx) (Not including Part B Paragraphs (Team Assessment)
 
 
 ### User Stories and Design Diagrams (Assignment #4)
