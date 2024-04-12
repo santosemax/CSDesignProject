@@ -10,8 +10,8 @@ References:
 
 ### Meeting Notes:
 Max:
-- Here are my notes that I made over the course of the second semester for the coding: [Notes1](), [Notes2](), [Notes3](), Notes[4]()  (Note: These are all extracted from my onenote which I used just to map out what I was doing for a period of time)
-- Also, for justification of my hours, refer to my [summary of hours]()
+- Here are my notes that I made over the course of the second semester for the coding: [Notes1](https://github.com/santosemax/CSDesignProject/blob/main/Semester%202%20Work/Max_Notes/Notes1.txt), [Notes2](https://github.com/santosemax/CSDesignProject/blob/main/Semester%202%20Work/Max_Notes/Notes2.txt), [Notes3](https://github.com/santosemax/CSDesignProject/blob/main/Semester%202%20Work/Max_Notes/Notes3.txt), Notes[4](https://github.com/santosemax/CSDesignProject/blob/main/Semester%202%20Work/Max_Notes/Notes4.txt), Notes[5](https://github.com/santosemax/CSDesignProject/blob/main/Semester%202%20Work/Max_Notes/Notes5.txt)  (Note: These are all extracted from my onenote which I used just to map out what I was doing for a period of time)
+- Also, for justification of my hours, refer to my [summary of hours](https://github.com/santosemax/CSDesignProject/blob/main/Semester%202%20Work/Sum_Hours_Max.md)
 
 Each team member met at least once per week on Wednesdays and/or Fridays (per our team contract) to work on assignments.
 
