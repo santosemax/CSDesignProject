@@ -17,7 +17,7 @@
 
 ### 7. Self-Assessment Essays (Assignment #3)
 - [Max Santos: Sem1](https://github.com/santosemax/CSDesignProject/tree/main/SelfAssessment)
-- [Max Santos: Sem2](https://github.com/santosemax/CSDesignProject/blob/main/SelfAssessment/SelfAssessmentSem2_Santos.docx) (Not including Part B Paragraphs (Team Assessment)
+- [Max Santos: Sem2](https://github.com/santosemax/CSDesignProject/blob/main/SelfAssessment/SelfAssessmentSem2_Santos.docx) (Not including Part B Paragraph (Team Assessment)
 
 
 ### User Stories and Design Diagrams (Assignment #4)
