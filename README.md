@@ -2,6 +2,8 @@
 
 ## SUBMARINE
 
+### Final Design Report: Table of Contents
+
 ### 1. [Project Description](https://github.com/santosemax/CSDesignProject/blob/main/Project-Description.md)
 
 ### 2. [User Interface Specification](https://github.com/santosemax/CSDesignProject/blob/main/UserDocs.md)
