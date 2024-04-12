@@ -10,6 +10,8 @@
 
 ### [User Manual](https://github.com/santosemax/CSDesignProject/blob/main/Documentation/UserManual.md)
 
+### [Spring Final PPT Presentation](https://docs.google.com/presentation/d/1Nhw4Ru1bslpZy8Jn6g7-3GaBGiJECLX94ZD6Q6eaIGU/edit?usp=sharing)
+
 
 
 
