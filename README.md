@@ -12,6 +12,8 @@
 
 ### [Spring Final PPT Presentation](https://docs.google.com/presentation/d/1Nhw4Ru1bslpZy8Jn6g7-3GaBGiJECLX94ZD6Q6eaIGU/edit?usp=sharing)
 
+### [Final Expo Poster](https://docs.google.com/presentation/d/1LWkO6Kht8-dDCr4GuFAJ6Antr9C2X-41hF-urhRPkpM/edit?usp=sharing)
+
 
 
 
