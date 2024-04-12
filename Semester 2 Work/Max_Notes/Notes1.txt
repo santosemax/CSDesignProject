@@ -1,0 +1,12 @@
+Flask Application Setup and Main Page
+    - Flask App Initialization
+      - Import Flask and related modules.
+      - Initialize Flask app with app = Flask(__name__).
+    
+    - Main Page Routing
+      - Route '/' leads to the index() function.
+      - index() renders the index.html template.
+      - Primary landing page for users.
+    
+    - Debug Mode
+      - App is run in debug mode to facilitate development and troubleshooting.

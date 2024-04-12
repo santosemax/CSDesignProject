@@ -1,0 +1,12 @@
+Search Functionality and Result Handling
+    - Handling POST Requests
+      - Route /search handles form submissions.
+      - Retrieves the user's search term and processes it.
+    
+    - Database Querying
+      - Check if the search term already exists in the database.
+      - If not present, perform searches and scrape data, then store results.
+    
+    - Combining Results from Multiple Sources
+      - Aggregate results from different sources.
+      - Update database with new entries including various media types (articles, films, albums, books).

@@ -1,0 +1,16 @@
+External API and Web Scraping Integration
+    - Spotify API Usage
+      - Initialize Spotify client with specific client ID and secret.
+      - Function search_albums searches Spotify for albums related to the search term.
+    
+    - IMDb Integration
+      - Utilize IMDbPy package to search for movies.
+      - Function search_films retrieves top 5 relevant movies from IMDb.
+    
+    - Google Books API
+      - Function search_books performs a web request to Google Books API.
+      - Parses JSON response to extract book details.
+    
+    - Web Scraping
+      - scrape_google_results and scrape_wikipedia_results for gathering data from Google and Wikipedia respectively.
+      - Utilizes googlesearch and wikipediaapi libraries.

@@ -1,0 +1,8 @@
+Displaying Search Results
+    - Results Retrieval Route
+      - Route /results/<search_term> for displaying search results.
+      - Queries database to retrieve all entries related to the search term.
+    
+    - Results Presentation
+      - Render results.html template.
+      - Pass results to the template to display on the webpage.
