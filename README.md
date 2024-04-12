@@ -1,6 +1,6 @@
 # Senior Design Project
 
-## Team MSI
+## SUBMARINE
 
 ### 1. [Project Description](https://github.com/santosemax/CSDesignProject/blob/main/Project-Description.md)
 
