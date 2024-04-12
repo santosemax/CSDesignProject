@@ -7,3 +7,5 @@ Summary of Hours (Max):
 
 - I would also like to insert my commits on Github:
 ![Image](https://github.com/santosemax/CSDesignProject/blob/main/Semester%202%20Work/Commits.jpg)
+
+- Note: I did not commit every weekend.
