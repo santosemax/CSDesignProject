@@ -6,7 +6,7 @@
 
 ### [User Interface Specification](https://github.com/santosemax/CSDesignProject/blob/main/UserDocs.md)
 
-### Test Plan
+### [Test Plan](https://github.com/santosemax/CSDesignProject/blob/main/Semester%202%20Work/Team%20MSJ%20-%20Test%20Plan.docx)
 
 
 
