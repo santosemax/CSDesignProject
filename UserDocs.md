@@ -1,7 +1,5 @@
 # User Documentation (modified for final version of app)
 
-[Application Name] is a more efficient way to search for specific information from web articles done on films, literature, and other forms of art. Instead of browsing for the piece of information you’re looking for, [Application] will pull what you’re looking for.
-
 ## Table of Contents
 - [Overview](#overview)
 - [Functions](#functions)
