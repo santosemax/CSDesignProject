@@ -8,6 +8,8 @@
 
 ### [Test Plan and Results](https://github.com/santosemax/CSDesignProject/blob/main/Semester%202%20Work/Team%20MSJ%20-%20Test%20Plan.docx)
 
+### [User Manual](https://github.com/santosemax/CSDesignProject/blob/main/Documentation/UserManual.md)
+
 
 
 
