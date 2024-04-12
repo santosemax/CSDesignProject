@@ -8,6 +8,8 @@ from spotipy.oauth2 import SpotifyClientCredentials
 import requests
 import re
 
+# Tests: JFK, Pink Floyd, Heat
+
 app = Flask(__name__)
 
 # Initialize Spotify client
