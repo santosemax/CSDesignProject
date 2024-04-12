@@ -24,8 +24,9 @@
 
 ### 9. [Summary of Expenses](https://github.com/santosemax/CSDesignProject/blob/main/Semester%202%20Work/Sum_Expenses.md)
 
-### 10. Appendix
+### 10. [Appendix](https://github.com/santosemax/CSDesignProject/blob/main/Appendix.md)
 
+# Last semester pages (kept just in case):
 ### User Stories and Design Diagrams (Assignment #4)
 - [User Stories](https://github.com/santosemax/CSDesignProject/blob/main/User_Stories.md)
 - [Design Diagrams](https://github.com/santosemax/CSDesignProject/tree/main/Design_Diagrams)
@@ -49,6 +50,3 @@
 
 ### Budget
 - [Budget](https://github.com/santosemax/CSDesignProject/blob/main/Budget.md)
-
-### Appendix
-- [Appendix](https://github.com/santosemax/CSDesignProject/blob/main/Appendix.md)
