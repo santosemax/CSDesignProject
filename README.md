@@ -19,6 +19,11 @@
 - [Max Santos: Sem1](https://github.com/santosemax/CSDesignProject/tree/main/SelfAssessment)
 - [Max Santos: Sem2](https://github.com/santosemax/CSDesignProject/blob/main/SelfAssessment/SelfAssessmentSem2_Santos.docx) (Not including Part B Paragraph (Team Assessment)
 
+### 8. Summary of Hours and Justification
+
+### 9. Summary of Expenses
+
+### 10. Appendix
 
 ### User Stories and Design Diagrams (Assignment #4)
 - [User Stories](https://github.com/santosemax/CSDesignProject/blob/main/User_Stories.md)
