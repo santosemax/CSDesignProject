@@ -26,7 +26,7 @@
 
 ### 10. [Appendix](https://github.com/santosemax/CSDesignProject/blob/main/Appendix.md)
 
-# Last semester pages (kept just in case):
+## Last semester pages (kept just in case):
 ### User Stories and Design Diagrams (Assignment #4)
 - [User Stories](https://github.com/santosemax/CSDesignProject/blob/main/User_Stories.md)
 - [Design Diagrams](https://github.com/santosemax/CSDesignProject/tree/main/Design_Diagrams)
