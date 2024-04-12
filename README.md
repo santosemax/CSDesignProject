@@ -21,7 +21,7 @@
 
 ### 8. [Summary of Hours and Justification](https://github.com/santosemax/CSDesignProject/blob/main/Semester%202%20Work/Sum_Hours_Max.md)
 
-### 9. Summary of Expenses
+### 9. [Summary of Expenses](https://github.com/santosemax/CSDesignProject/blob/main/Semester%202%20Work/Sum_Expenses.md)
 
 ### 10. Appendix
 
