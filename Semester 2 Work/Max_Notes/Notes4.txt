@@ -1,4 +1,4 @@
-Displaying Search Results
+Displaying Search Results (Saturday, March 23)
     - Results Retrieval Route
       - Route /results/<search_term> for displaying search results.
       - Queries database to retrieve all entries related to the search term.

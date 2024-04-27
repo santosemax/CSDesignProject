@@ -1,4 +1,4 @@
-Search Functionality and Result Handling
+Search Functionality and Result Handling (Friday, April 7)
     - Handling POST Requests
       - Route /search handles form submissions.
       - Retrieves the user's search term and processes it.

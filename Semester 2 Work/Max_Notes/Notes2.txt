@@ -1,4 +1,4 @@
-Database Management and Data Persistence
+Database Management and Data Persistence (Sunday, Feb 18)
     - SQLite Database Setup
       - Connection to SQLite database via sqlite3.
       - Creation of articles table if it does not exist.

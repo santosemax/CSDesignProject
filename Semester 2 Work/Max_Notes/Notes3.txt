@@ -1,4 +1,4 @@
-External API and Web Scraping Integration
+External API and Web Scraping Integration (Sunday, March 3)
     - Spotify API Usage
       - Initialize Spotify client with specific client ID and secret.
       - Function search_albums searches Spotify for albums related to the search term.

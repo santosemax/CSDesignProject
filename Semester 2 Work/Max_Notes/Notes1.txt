@@ -1,4 +1,4 @@
-Flask Application Setup and Main Page
+Flask Application Setup and Main Page (Saturday, Feb 10)
     - Flask App Initialization
       - Import Flask and related modules.
       - Initialize Flask app with app = Flask(__name__).
